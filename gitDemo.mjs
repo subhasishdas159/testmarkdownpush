@@ -1,6 +1,7 @@
 import simpleGit from 'simple-git';
 const git = simpleGit();
 
+// after it has been init this runs
 const afterInit = async () => {
   const status = await git.status();
   console.log('status', status);
@@ -13,8 +14,9 @@ const afterInit = async () => {
 };
 
 try {
-  await git.init();
   await afterInit();
 } catch (error) {
   console.log('error', error);
+  await git.init();
+  await afterInit();
 }
