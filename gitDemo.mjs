@@ -4,9 +4,9 @@ const git = simpleGit();
 // after it has been init this runs
 const afterInit = async () => {
   const status = await git.status();
-  console.log('status', status);
+  // Only run this when there is actually some changes
   if (!status.isClean()) {
-    await git.add('./*').commit('initial commit', () =>
+    await git.add('./*').commit(process.argv, () =>
       console.log('after committing this has ben invoked'),
     );
   }
