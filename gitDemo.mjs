@@ -1,13 +1,14 @@
 import simpleGit from 'simple-git';
 const git = simpleGit();
-// dfnkg
+
+var commitMsgArgs = process.argv.slice(2);
 
 // after it has been init this runs
 const afterInit = async () => {
   const status = await git.status();
   // Only run this when there is actually some changes
   if (!status.isClean()) {
-    await git.add('./*').commit(process.argv, () =>
+    await git.add('./*').commit(commitMsgArgs, () =>
       console.log('after committing this has ben invoked'),
     );
   }
