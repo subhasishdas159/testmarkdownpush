@@ -1,5 +1,6 @@
 import simpleGit from 'simple-git';
 const git = simpleGit();
+// dfnkg
 
 // after it has been init this runs
 const afterInit = async () => {
