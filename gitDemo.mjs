@@ -23,8 +23,8 @@ const afterInit = async () => {
 //   'git@github.com:subhasishdas159/testmarkdownpush.git',
 // );
 
-await git.listRemote(['--heads', '--tags'], console.log)
-// console.log('remotes', remotes)
+const remotes = await git.getRemotes()
+console.log('remotes', remotes)
 
 try {
   await afterInit();
