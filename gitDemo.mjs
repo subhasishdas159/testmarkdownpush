@@ -35,4 +35,4 @@ if (!remotes.length) {
   );
 }
 
-await git.push({ '--set-upstream': true });
+await git.push({ '-u': true });
