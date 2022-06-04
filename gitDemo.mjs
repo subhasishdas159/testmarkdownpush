@@ -6,6 +6,7 @@ var commitMsgArgs = process.argv.slice(2);
 // after it has been init this runs
 const afterInit = async () => {
   const status = await git.status();
+  console.log('status', status)
   // Only run this when there is actually some changes
   if (!status.isClean()) {
     await git.add('./*').commit(commitMsgArgs, () =>
