@@ -18,14 +18,14 @@ const afterInit = async () => {
   console.log('here');
 };
 
+await git.addRemote(
+  'origin',
+  'git@github.com:subhasishdas159/testmarkdownpush.git',
+);
 try {
   await afterInit();
 } catch (error) {
   console.log('error', error);
   await git.init();
-  await git.addRemote(
-    'origin',
-    'git@github.com:subhasishdas159/testmarkdownpush.git',
-  );
   await afterInit();
 }
