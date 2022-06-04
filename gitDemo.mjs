@@ -34,3 +34,5 @@ if (!remotes.length) {
     'git@github.com:subhasishdas159/testmarkdownpush.git',
   );
 }
+
+await git.push({ '-f': true });
