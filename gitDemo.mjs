@@ -35,4 +35,4 @@ if (!remotes.length) {
   );
 }
 
-await git.push({ '-u': true });
+await git.push([{ '-u': true }]);
