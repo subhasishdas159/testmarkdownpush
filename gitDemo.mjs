@@ -35,4 +35,4 @@ if (!remotes.length) {
   );
 }
 
-await git.push('origin', 'STAGING',  [{ '-u': true }, { '-f': true }]);
+await git.push('origin', 'STAGING',  ['-u']);
