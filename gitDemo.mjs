@@ -18,6 +18,8 @@ const afterInit = async () => {
   console.log('here');
 };
 
+// hello
+
 try {
   await afterInit();
 } catch (error) {
