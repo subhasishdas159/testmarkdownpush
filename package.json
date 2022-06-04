@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@slack/bolt": "^3.11.1",
+    "simple-git": "^3.7.1"
+  }
+}
